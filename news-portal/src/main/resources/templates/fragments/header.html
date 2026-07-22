@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+<header th:fragment="header" class="site-header">
+    <div class="header-inner">
+        <a href="/" class="brand">
+            GLOBAL<span>NEWS</span>
+        </a>
+        <nav>
+            <a href="/">Browse</a>
+            <a sec:authorize="hasAnyRole('EDITOR','ADMIN')" href="/editor/news">Manage News</a>
+            <a sec:authorize="hasRole('ADMIN')" href="/admin/categories">Categories</a>
+            <span sec:authorize="isAuthenticated()" class="user-chip">
+                👤 <span sec:authentication="name"></span>
+            </span>
+            <a sec:authorize="isAuthenticated()" href="/logout" class="btn-primary">Logout</a>
+            <a sec:authorize="isAnonymous()" href="/login">Login</a>
+            <a sec:authorize="isAnonymous()" href="/register" class="btn-link">Register</a>
+        </nav>
+    </div>
+</header>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Dashboard - Global News</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container" style="max-width: 800px;">
+    <h1>Admin Control Panel</h1>
+    <p class="muted" style="margin-bottom: 24px;">Manage site parameters, editors, and categories.</p>
+
+    <div class="card">
+        <h2>Publication Management</h2>
+        <p class="muted">Access core editorial configuration tools below:</p>
+
+        <div style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap;">
+            <a href="/admin/categories" class="btn btn-primary">Manage Categories</a>
+            <a href="/editor/news" class="btn btn-secondary">Manage All News</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

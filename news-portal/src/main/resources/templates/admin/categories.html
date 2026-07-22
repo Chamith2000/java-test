@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Manage Categories - Global News</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container" style="max-width: 800px;">
+    <h1>Manage Categories</h1>
+    <p class="muted" style="margin-bottom: 24px;">Add new categories or manage existing article classifications.</p>
+
+    <div class="card">
+        <div class="alert" th:if="${errorMessage}" th:text="${errorMessage}"></div>
+
+        <form class="stacked" th:action="@{/admin/categories}" th:object="${categoryDto}" method="post" style="display:flex; gap:12px; align-items:flex-end;">
+            <div style="flex:1;">
+                <label style="margin-top:0;">New Category Name</label>
+                <input type="text" th:field="*{name}" placeholder="e.g. Technology, World, Sports" required/>
+                <div class="error-text" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+            </div>
+            <button type="submit" class="btn btn-accent" style="margin:0; height: 45px;">Add Category</button>
+        </form>
+    </div>
+
+    <div class="card" style="padding: 0;">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                <tr>
+                    <th>Category Name</th>
+                    <th style="text-align: right;">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="cat : ${categories}">
+                    <td style="font-weight: 600;" th:text="${cat.name}">Category</td>
+                    <td style="text-align: right;">
+                        <form th:action="@{/admin/categories/{id}/delete(id=${cat.id})}" method="post" onsubmit="return confirm('Delete this category? Associated articles will remain safe.');">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1561958-0164-448e-9e80-8aa27ca36818" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="24dffb8e-8abe-4201-a201-99ee2730076b" value="" />
+      <entry key="71ab4814-3f3f-45d1-9c66-78555891990e" value="" />
+      <entry key="c93dfda3-9745-4387-b51b-04281465faab" value="" />
+    </colors>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="66" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.000000000760948" />
+      <entry key="S30" value="1.0013540494128887" />
+      <entry key="S60" value="1.0515372085046994" />
+      <entry key="M2" value="1.3202612790242507" />
+      <entry key="M5" value="1.9606420079515239" />
+      <entry key="M10" value="2.3859664149755186" />
+      <entry key="M15" value="2.566157958471088" />
+      <entry key="M30" value="2.7698154873363894" />
+      <entry key="H1" value="2.8813855172981215" />
+      <entry key="H2" value="2.9397850008667312" />
+      <entry key="H4" value="2.9696620687931317" />
+      <entry key="D1" value="2.9949113729502104" />
+      <entry key="W1" value="2.999272258179192" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.7845840978967508" />
+      <entry key="MS500" value="0.9526379980439373" />
+      <entry key="S2" value="0.987943197140516" />
+      <entry key="S5" value="0.9951597218200828" />
+      <entry key="S10" value="0.9975769252644544" />
+      <entry key="S30" value="0.9991916551761939" />
+      <entry key="S60" value="0.9995957458773991" />
+      <entry key="M2" value="0.9997978525068951" />
+      <entry key="M5" value="0.9999191360985962" />
+      <entry key="M10" value="0.9999595672318937" />
+      <entry key="M15" value="0.9999730446396138" />
+      <entry key="M30" value="0.9999865222289818" />
+      <entry key="H1" value="0.9999932610917844" />
+      <entry key="H2" value="0.9999966305402156" />
+      <entry key="H4" value="0.9999983152686887" />
+      <entry key="D1" value="0.999999719211251" />
+      <entry key="W1" value="0.9999999598873167" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.7845840978967508" />
+      <entry key="MS500" value="0.9526422957552276" />
+      <entry key="S2" value="1.0334744194498289" />
+      <entry key="S5" value="1.2857785342292554" />
+      <entry key="S10" value="1.5366676534582098" />
+      <entry key="S30" value="1.814410350678398" />
+      <entry key="S60" value="1.9532130739440297" />
+      <entry key="M2" value="2.269662401636778" />
+      <entry key="M5" value="2.939919877933803" />
+      <entry key="M10" value="3.3754952946659187" />
+      <entry key="M15" value="3.559149186923846" />
+      <entry key="M30" value="3.7662959998498984" />
+      <entry key="H1" value="3.8796217720020914" />
+      <entry key="H2" value="3.938902097482539" />
+      <entry key="H4" value="3.969220355485609" />
+      <entry key="D1" value="3.9948377173898595" />
+      <entry key="W1" value="3.99926173505362" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3GqPVpnrtTd3bvK1GZEWE0d0OhT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="NewsPortalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="news-portal" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.newsportal.NewsPortalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1561958-0164-448e-9e80-8aa27ca36818" name="Changes" comment="" />
+      <created>1784696152973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784696152973</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Manage News - News Portal</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container">
+    <h1>Manage News</h1>
+    <a href="/editor/news/new"><button type="button">+ New News Item</button></a>
+
+    <div class="card" style="margin-top: 20px;">
+        <table>
+            <thead>
+            <tr><th>Title</th><th>Categories</th><th>Author</th><th></th></tr>
+            </thead>
+            <tbody>
+            <tr th:each="n : ${newsList}">
+                <td><a th:href="@{/news/{id}(id=${n.id})}" th:text="${n.title}">Title</a></td>
+                <td>
+                    <span class="tag" th:each="c : ${n.categories}" th:text="${c.name}">Tag</span>
+                </td>
+                <td th:text="${n.authorUsername}">author</td>
+                <td>
+                    <a th:href="@{/editor/news/{id}/edit(id=${n.id})}">Edit</a>
+                    &nbsp;
+                    <form th:action="@{/editor/news/{id}/delete(id=${n.id})}" method="post" style="display:inline"
+                          onsubmit="return confirm('Delete this news item?');">
+                        <button type="submit" class="btn-danger" style="margin:0; padding:4px 10px;">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

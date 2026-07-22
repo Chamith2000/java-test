@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Create Account - Global News</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container" style="max-width: 440px;">
+    <div class="card" style="margin-top: 20px;">
+        <h1>Create Account</h1>
+        <p class="muted" style="margin-bottom: 20px;">Join Global News to join discussions and customize your newsfeed.</p>
+
+        <div class="alert" th:if="${errorMessage}" th:text="${errorMessage}"></div>
+
+        <form class="stacked" th:action="@{/register}" th:object="${registerRequest}" method="post">
+            <label>Username</label>
+            <input type="text" th:field="*{username}" placeholder="Choose a username" required/>
+            <div class="error-text" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+
+            <label>Email Address</label>
+            <input type="email" th:field="*{email}" placeholder="name@example.com" required/>
+            <div class="error-text" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+
+            <label>Password</label>
+            <input type="password" th:field="*{password}" placeholder="Create a strong password" required/>
+            <div class="error-text" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+
+            <button type="submit" class="btn btn-accent btn-block" style="margin-top: 24px;">Register Account</button>
+        </form>
+
+        <p class="muted" style="margin-top:20px; text-align:center;">
+            Already have an account? <a href="/login" style="color:var(--primary); font-weight:600;">Log in</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

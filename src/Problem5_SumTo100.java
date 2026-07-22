@@ -23,7 +23,7 @@ public class Problem5_SumTo100 {
         solve(pos + 1, expression + " + " + digit, total + digit, digit);
 
         solve(pos + 1, expression + " - " + digit, total - digit, -digit);
-        
+
         long newLastTerm;
         if (lastTerm >= 0) {
             newLastTerm = lastTerm * 10 + digit;

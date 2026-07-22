@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:text="${formTitle} + ' - Global News'">News Form</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container" style="max-width: 720px;">
+    <a href="/editor/news" class="muted" style="text-decoration:none; display:inline-block; margin-bottom: 16px;">&larr; Back to articles</a>
+
+    <div class="card">
+        <h1 th:text="${formTitle}" style="margin-bottom: 8px;">Edit Article</h1>
+        <p class="muted" style="margin-bottom: 24px;">Publish or update stories across your categories.</p>
+
+        <form class="stacked" th:action="@{${formAction}}" th:object="${newsCreateDto}" method="post">
+            <label>Headline Title</label>
+            <input type="text" th:field="*{title}" placeholder="Enter story headline" required/>
+            <div class="error-text" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
+
+            <label>Article Content</label>
+            <textarea th:field="*{content}" placeholder="Write the full story here..." required style="min-height: 240px;"></textarea>
+            <div class="error-text" th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></div>
+
+            <label>Select Categories</label>
+            <select th:field="*{categoryIds}" multiple size="5">
+                <option th:each="cat : ${allCategories}" th:value="${cat.id}" th:text="${cat.name}">Category Name</option>
+            </select>
+            <p class="muted" style="font-size:0.8rem; margin-top: 6px;">Hold Ctrl (Windows) or Cmd (Mac) to select multiple topics.</p>
+            <div class="error-text" th:if="${#fields.hasErrors('categoryIds')}" th:errors="*{categoryIds}"></div>
+
+            <div style="display: flex; gap: 12px; margin-top: 24px;">
+                <button type="submit" class="btn btn-accent">Save Article</button>
+                <a href="/editor/news" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

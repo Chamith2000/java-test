@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Explore Categories - Global News</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container">
+    <header style="margin-bottom: 32px;">
+        <h1>Explore Topics</h1>
+        <p class="muted">Select a category to view the latest global coverage.</p>
+    </header>
+
+    <div class="category-grid">
+        <a th:each="cat : ${categories}"
+           th:href="@{/category/{id}(id=${cat.id})}"
+           class="category-card"
+           th:text="${cat.name}">
+            Category
+        </a>
+    </div>
+</div>
+</body>
+</html>

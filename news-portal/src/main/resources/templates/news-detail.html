@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:text="${news.title} + ' - Global News'">News</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container" style="max-width: 800px;">
+    <a href="/" class="muted" style="text-decoration:none; display:inline-block; margin-bottom: 16px;">&larr; Back to topics</a>
+
+    <article class="card">
+        <div class="article-header">
+            <div class="tag-container">
+                <span class="tag" th:each="c : ${news.categories}" th:text="${c.name}">Tag</span>
+            </div>
+            <h1 th:text="${news.title}">Article Title</h1>
+            <div class="muted" th:text="'By ' + ${news.authorUsername} + ' • ' + ${#temporals.format(news.createdAt, 'dd MMM yyyy, HH:mm')}">
+                Author & Date
+            </div>
+        </div>
+        <div class="article-body" th:text="${news.content}">
+            Full news story text goes here...
+        </div>
+    </article>
+
+    <section class="card comment-section">
+        <h2>Discussion (<span th:text="${#lists.size(comments)}">0</span>)</h2>
+
+        <div th:if="${#lists.isEmpty(comments)}" class="muted" style="margin-bottom: 24px;">
+            No comments yet. Join the conversation first!
+        </div>
+
+        <div class="comment" th:each="c : ${comments}">
+            <strong th:text="${c.authorUsername}">User</strong>
+            <span class="muted" style="font-size:0.8rem;" th:text="' • ' + ${#temporals.format(c.createdAt, 'dd MMM yyyy, HH:mm')}"></span>
+            <p style="margin: 6px 0 0 0;" th:text="${c.content}">Comment body</p>
+        </div>
+
+        <div sec:authorize="isAuthenticated()" style="margin-top: 24px;">
+            <h3>Leave a Comment</h3>
+            <form class="stacked" th:action="@{/news/{id}/comment(id=${news.id})}" th:object="${commentCreateDto}" method="post">
+                <textarea th:field="*{content}" placeholder="Share your thoughts respectfully..." required></textarea>
+                <div class="error-text" th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></div>
+                <button type="submit">Publish Comment</button>
+            </form>
+        </div>
+
+        <div sec:authorize="isAnonymous()" class="muted" style="margin-top: 16px;">
+            Please <a href="/login">log in</a> to participate in the conversation.
+        </div>
+    </section>
+</div>
+</body>
+</html>
